@@ -218,10 +218,10 @@ services:
       - -c
       - |
         airflow db migrate && \
-        airflow users delete --username ${AIRFLOW_USER} 2>/dev/null || true && \
+        airflow users delete --username "${AIRFLOW_USER}" 2>/dev/null || true && \
         airflow users create \
-          --username ${AIRFLOW_USER} \
-          --password ${AIRFLOW_PASSWORD} \
+          --username "${AIRFLOW_USER}" \
+          --password "${AIRFLOW_PASSWORD}" \
           --firstname Steel \
           --lastname Admin \
           --role Admin \
